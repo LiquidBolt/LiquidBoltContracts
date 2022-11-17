@@ -542,13 +542,13 @@ contract LiquidFactory is ILiquidFactory {
 
     function setTraderFees(uint16 _fees) external {
         require(msg.sender == feeToSetter, 'Liquid: FORBIDDEN');
-        require(_fees <= 10000, "Liquid: Fees too high");
+        require(_fees <= 2000, "Liquid: Fees too high");
         traderFees = _fees;
     }
 
     function setOtherFees(uint16 _fees) external {
         require(msg.sender == feeToSetter, 'Liquid: FORBIDDEN');
-        require(_fees <= 10000, "Liquid: Fees too high");
+        require(_fees <= 2000, "Liquid: Fees too high");
         otherFees = _fees;
     }
 
@@ -586,13 +586,13 @@ contract LiquidFactory is ILiquidFactory {
 
     function setCustomFees(address _pair, uint16 _fees) external {
         require(msg.sender == feeToSetter, 'Liquid: FORBIDDEN');
-        require(_fees <= 10000, "Liquid: Fees too high");
+        require(_fees <= 2000, "Liquid: Fees too high");
         customFeesByPair[_pair] = _fees;
     }
 
     function setDevFees(uint16 _fees) external {
         require(msg.sender == feeToSetter, 'Liquid: FORBIDDEN');
-        require(_fees <= 10000, "Liquid: Fees too high");
+        require(_fees <= 5000, "Liquid: Fees too high");
         devFees = _fees;
     }
 
